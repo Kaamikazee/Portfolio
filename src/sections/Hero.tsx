@@ -1,3 +1,5 @@
+"use client"
+
 import memojiImage from "@/assets/images/memoji-computer.png";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import Image from "next/image";
@@ -7,6 +9,16 @@ import SparkleIcon from "@/assets/icons/sparkle.svg"
 import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
+  const handleScroll = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      window.scrollTo({
+        top: el.offsetTop - 80, // offset for fixed header
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
@@ -77,14 +89,20 @@ export const HeroSection = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center mt-8">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-2">
+          <button
+            onClick={() => handleScroll("projects")}
+            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
+          >
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
           </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl">
+          <button
+            onClick={() => handleScroll("contact")}
+            className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl"
+          >
             <span>🙋‍♂️</span>
-            <span className="font-semibold">Let&apos;s connect </span>
+            <span className="font-semibold">Let&apos;s connect</span>
           </button>
         </div>
       </div>
