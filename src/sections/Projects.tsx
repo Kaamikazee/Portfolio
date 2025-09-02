@@ -1,8 +1,8 @@
 "use client";
 
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import darkSaasLandingPage from "@/assets/images/LiveTimer-1-modified.png";
+import lightSaasLandingPage from "@/assets/images/Dash-1-modified.png";
+import aiStartupLandingPage from "@/assets/images/Analytics-1-modified.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,42 +12,43 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Sync Sphere",
+    year: "2025",
+    title: "Dashboard Page",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Overview of key metrics at a glance" },
+      { title: "Customizable widgets and filters" },
+      { title: "Real-time updates across devices" },
     ],
     link: "https://youtu.be/7hi5zwO75yc",
     image: lightSaasLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Sync Sphere",
+    year: "2025",
+    title: "Live Timer Page",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Record time in real time" },
+      { title: "See others' recordings live" },
+      { title: "Take breaks with taggable notes" },
+    ],
+    link: "https://youtu.be/4k7IdSLxh6w",
+    image: darkSaasLandingPage,
+  },
+  {
+    company: "Sync Sphere",
+    year: "2025",
+    title: "Analytics Page",
+    results: [
+      { title: "Detailed usage analytics and trends" },
+      { title: "Performance optimization insights" },
+      { title: "Exportable reports (CSV/PDF)" },
     ],
     link: "https://youtu.be/Z7I5uSRHMHg",
     image: aiStartupLandingPage,
   },
 ];
+
 
 export const ProjectsSection = () => {
   return (
@@ -108,7 +109,7 @@ export const ProjectsSection = () => {
                 </div>
 
                 {/* Right column - project image */}
-                <div className="relative">
+                <div className="relative rounded-xl">
                   <Image
                     src={project.image}
                     alt={project.title}
