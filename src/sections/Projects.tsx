@@ -10,6 +10,7 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 
+
 const portfolioProjects = [
   {
     company: "Sync Sphere",
@@ -20,7 +21,7 @@ const portfolioProjects = [
       { title: "Customizable widgets and filters" },
       { title: "Real-time updates across devices" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://sync-sphere-production.up.railway.app",
     image: lightSaasLandingPage,
   },
   {
@@ -32,7 +33,7 @@ const portfolioProjects = [
       { title: "See others' recordings live" },
       { title: "Take breaks with taggable notes" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
+    link: "https://sync-sphere-production.up.railway.app/timer",
     image: darkSaasLandingPage,
   },
   {
@@ -44,7 +45,7 @@ const portfolioProjects = [
       { title: "Performance optimization insights" },
       { title: "Exportable reports (CSV/PDF)" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://sync-sphere-production.up.railway.app",
     image: aiStartupLandingPage,
   },
 ];
